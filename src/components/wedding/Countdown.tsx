@@ -13,18 +13,21 @@ function calc() {
 }
 
 export function Countdown() {
-  const [t, setT] = useState(calc);
+  const [t, setT] = useState<ReturnType<typeof calc> | null>(null);
   useEffect(() => {
+    setT(calc());
     const id = setInterval(() => setT(calc()), 1000);
     return () => clearInterval(id);
   }, []);
 
+
   const items = [
-    { label: "Days", value: t.days },
-    { label: "Hours", value: t.hours },
-    { label: "Minutes", value: t.minutes },
-    { label: "Seconds", value: t.seconds },
+    { label: "Days", value: t?.days ?? 0 },
+    { label: "Hours", value: t?.hours ?? 0 },
+    { label: "Minutes", value: t?.minutes ?? 0 },
+    { label: "Seconds", value: t?.seconds ?? 0 },
   ];
+
 
   return (
     <div className="grid grid-cols-4 gap-3 sm:gap-6 max-w-2xl mx-auto">
