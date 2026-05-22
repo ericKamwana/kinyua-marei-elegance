@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import { type ReactNode } from "react";
+import { DashikiOrnament } from "./DashikiPattern";
+
 
 export function Section({
   id,
@@ -31,9 +33,10 @@ export function Section({
                 {title}
               </h2>
             )}
-            <div className="mt-6 divider-gold">
-              <span className="font-script text-2xl">&</span>
+            <div className="mt-6 flex justify-center">
+              <DashikiOrnament className="w-44 sm:w-56 h-12 text-gold" />
             </div>
+
           </motion.div>
         )}
         {children}

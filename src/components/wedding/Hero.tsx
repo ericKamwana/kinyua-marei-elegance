@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import heroImg from "@/assets/hero-mountain.jpg";
+import { DashikiBand, DashikiOrnament } from "./DashikiPattern";
+
 
 export function Hero() {
   return (
@@ -77,11 +79,11 @@ export function Hero() {
           <p className="text-muted-foreground italic text-base sm:text-lg max-w-md">
             Invite you to celebrate their wedding
           </p>
-          <div className="divider-gold">
-            <span className="font-display text-sm sm:text-base tracking-[0.4em] uppercase text-forest">
-              15 · 08 · 2026
-            </span>
-          </div>
+          <DashikiOrnament className="w-48 sm:w-64 h-12 text-gold" />
+          <span className="font-display text-sm sm:text-base tracking-[0.4em] uppercase text-forest">
+            15 · 08 · 2026
+          </span>
+
         </motion.div>
 
         <motion.div

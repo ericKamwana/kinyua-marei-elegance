@@ -6,7 +6,9 @@ import { Section } from "@/components/wedding/Section";
 import { Countdown } from "@/components/wedding/Countdown";
 import { RSVP } from "@/components/wedding/RSVP";
 import { Particles } from "@/components/wedding/Particles";
+import { DashikiBand, DashikiOrnament } from "@/components/wedding/DashikiPattern";
 import qrImg from "@/assets/location-qr.png";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -151,6 +153,8 @@ function Index() {
 
         {/* Footer */}
         <footer className="relative py-24 px-6 text-center border-t border-gold/20">
+          <DashikiBand className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-3 text-gold/70" />
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -161,11 +165,13 @@ function Index() {
             <p className="font-script text-4xl sm:text-5xl gold-text mb-4">
               Two hearts, one love, one lifetime.
             </p>
-            <div className="divider-gold mt-6">
-              <span className="font-display text-xs tracking-[0.4em] text-forest uppercase">
-                C &nbsp;·&nbsp; Z
-              </span>
+            <div className="mt-6 flex justify-center">
+              <DashikiOrnament className="w-48 h-12 text-gold" />
             </div>
+            <p className="font-display text-xs tracking-[0.4em] text-forest uppercase mt-2">
+              C &nbsp;·&nbsp; Z
+            </p>
+
             <p className="mt-8 text-xs tracking-widest uppercase text-muted-foreground">
               15 August 2026 · Embu, Kenya
             </p>
