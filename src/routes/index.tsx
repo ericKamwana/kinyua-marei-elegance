@@ -153,6 +153,8 @@ function Index() {
 
         {/* Footer */}
         <footer className="relative py-24 px-6 text-center border-t border-gold/20">
+          <DashikiBand className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-3 text-gold/70" />
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
